@@ -2,8 +2,6 @@
 
 ## In Progress 🚧
 
-- [ ] Complete Italian translation coverage
-- [ ] Add German and Spanish translations
 - [ ] Implement package signing
 - [ ] Add support for private package repositories
 
@@ -19,7 +17,6 @@
 ## Medium Priority ⏳
 
 - [ ] Implement package testing framework
-- [ ] Add keyboard shortcuts
 - [ ] Create installation wizard
 - [ ] Add dark/light theme support
 - [ ] Implement package health checks
@@ -28,8 +25,6 @@
 
 - [ ] Add more comprehensive documentation
 - [ ] Implement CI/CD pipeline
-- [ ] Add performance benchmarks
-- [ ] Create video tutorials
 
 ## Completed ✓
 
@@ -37,6 +32,7 @@
 - [x] Basic GUI interface with CustomTkinter
 - [x] Package management functionality (init, build, install, upload)
 - [x] Multi-language support (English/Italian)
+- [x] Complete Italian translation coverage
 - [x] Logging system with viewer
 - [x] Help system with markdown support
 - [x] Update checker
@@ -71,3 +67,4 @@
 - Follow semantic versioning for releases
 - Keep dependencies updated regularly
 - Write tests for new features
+  
