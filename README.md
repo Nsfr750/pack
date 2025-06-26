@@ -58,6 +58,7 @@ Streamline your Python package development workflow with an intuitive interface.
 ### Installation
 
 #### From PyPI (Recommended)
+
 ```bash
 pip install python-package-manager
 ```
@@ -118,19 +119,16 @@ python -m pack
 
 ### Project Structure
 
-
 ```text
 pack/
-├── struttura/         # Core application modules
-│   ├── __init__.py
-│   ├── main.py         # Main application entry point
-│   ├── ui/             # UI components
-│   ├── utils/          # Utility functions
-│   └── resources/      # Resources and assets
-├── tests/             # Test suite
-├── docs/              # Documentation
-├── examples/          # Example projects
-└── requirements.txt   # Dependencies
+├── gui/                # GUI components
+├── struttura/          # Core application modules
+├── tests/              # Test suite
+├── docs/               # Documentation
+├── images/             # Project images PNG/ICO
+├── scripts/            # Projects scripts
+├── main.py             # Main application entry point
+└── requirements.txt    # Dependencies
 ```
 
 ### Running Tests
