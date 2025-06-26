@@ -15,6 +15,7 @@
 - [x] Add comprehensive Italian translation
 - [x] Improve error handling and user feedback
 - [ ] Add support for private package repositories
+- [ ] Add more comprehensive package signing documentation
 
 ## Medium Priority ⏳
 
@@ -22,11 +23,15 @@
 - [ ] Implement package health checks
 - [ ] Add keyboard shortcuts customization
 - [ ] Implement project templates
+- [ ] Add package validation and linting
+- [ ] Implement performance optimization for large packages
 
 ## Low Priority 📚
 
 - [ ] Add more comprehensive documentation
 - [ ] Implement CI/CD pipeline
+- [ ] Add integration with version control systems
+- [ ] Create plugin system for extending functionality
 
 ## Completed ✓
 
@@ -45,6 +50,10 @@
 - [x] Integrated terminal for command-line access
 - [x] Improved error handling and user feedback
 - [x] Keyboard shortcuts for common actions
+- [x] Comprehensive help documentation
+- [x] Package signing with GPG
+- [x] Repository management
+- [x] Dependency resolution system
 
 ## Future Ideas 💡
 
@@ -55,11 +64,6 @@
 - Automated testing framework
 - Package validation and linting
 - Performance optimization for large packages
-
-- [x] Project setup
-- [x] Basic GUI implementation
-- [x] Help system
-
 
 ## Notes
 

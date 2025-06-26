@@ -1,6 +1,6 @@
 # Python Package Manager GUI
 
-[![GitHub release](https://img.shields.io/badge/release-v1.2.0-green.svg?style=for-the-badge)](https://github.com/Nsfr750/pack/releases/tag/v1.2.0)
+[![GitHub release](https://img.shields.io/badge/release-v1.3.0-green.svg?style=for-the-badge)](https://github.com/Nsfr750/pack/releases/tag/v1.3.0)
 [![Python Version](https://img.shields.io/badge/python-3.8+-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg?style=for-the-badge)](https://www.gnu.org/licenses/gpl-3.0)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge)](https://github.com/Nsfr750/pack/graphs/commit-activity)
@@ -8,7 +8,7 @@
 [![Tests](https://img.shields.io/badge/tests-passing-green?style=for-the-badge)](https://github.com/Nsfr750/pack/actions)
 [![Coverage](https://img.shields.io/badge/coverage-95%25-brightgreen?style=for-the-badge)](https://codecov.io/gh/Nsfr750/pack)
 
-A modern, user-friendly GUI application built with CustomTkinter for managing Python packages. 
+A modern, user-friendly GUI application built with CustomTkinter for managing Python packages.
 Streamline your Python package development workflow with an intuitive interface.
 
 ![Python Package Manager Screenshot](images/eng.png)
@@ -21,9 +21,11 @@ Streamline your Python package development workflow with an intuitive interface.
 - 🏗️ **Initialize** new Python packages with customizable templates
 - 🔧 **Build** source distribution and wheel packages with a single click
 - ⚡ **Install** packages in development mode with automatic dependency handling
+- 🔐 **Sign** packages with GPG for enhanced security
 - ☁️ **Upload** packages to PyPI with secure credential management
 - 🔍 **Search** and manage installed packages
 - 📦 **Dependency** resolution and management
+- 🔄 **Repository** management for custom package sources
 
 ### 🛠️ Development Tools
 
@@ -36,12 +38,13 @@ Streamline your Python package development workflow with an intuitive interface.
 
 ### 🎨 User Experience
 
-- 🌍 **Multi-language** support (English/Italian)
+- 🌍 **Multi-language** support (English/Italian) with complete translation coverage
 - 🎨 **Themes** with light/dark mode support
 - ⌨️ **Keyboard Shortcuts** for power users
 - 🔄 **Auto-update** checking
-- 📚 **Comprehensive** in-app documentation
+- 📚 **Comprehensive** tabbed help system with detailed documentation
 - 🚦 **Status Bar** with useful information
+- 💬 **Clear Error Messages** with helpful guidance
 
 ## 🚀 Getting Started
 
@@ -55,8 +58,6 @@ Streamline your Python package development workflow with an intuitive interface.
 ### Installation
 
 #### From PyPI (Recommended)
-
-
 ```bash
 pip install python-package-manager
 ```
@@ -116,6 +117,7 @@ python -m pack
 ## 🛠️ Development
 
 ### Project Structure
+
 
 ```text
 pack/
@@ -177,36 +179,11 @@ This project is licensed under the GPL-3.0 License - see the [LICENSE](LICENSE) 
 ---
 
 Made with ❤️ by the Python Package Manager Team
-├── gui/               # GUI components
-├── tests/             # Test suite
-├── main.py            # Application entry point
-└── requirements.txt   # Project dependencies
-```
 
-### Running Tests
-
-```bash
-pytest tests/
-```
-
-### Code Style
+## Code Style
 
 This project uses:
 
 - Black for code formatting
 - Flake8 for linting
 - Type hints throughout the codebase
-
-## 🤝 Contributing
-
-Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details.
-
-## 📄 License
-
-This project is licensed under the GPLv3 License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Built with ❤️ using Python and CustomTkinter
-- Inspired by the needs of Python package maintainers
-- Thanks to all contributors who have helped improve this project
