@@ -35,19 +35,149 @@ pip install python-package-manager
 #### From Source
 
 1. Clone the repository:
-
    ```bash
    git clone https://github.com/Nsfr750/pack.git
    cd pack
    ```
 
 2. Install the package in development mode:
-
    ```bash
    pip install -e .
    ```
+   
+   Or install with all development dependencies:
+   ```bash
+   pip install -e ".[dev]"
+   ```
 
 ### First Run
+
+1. Launch the application:
+   ```bash
+   python -m pack
+   ```
+
+2. The main window will open with the following components:
+   - **Menu Bar**: Access all application features
+   - **Project Panel**: View and manage your project files
+   - **Console**: See command output and logs
+   - **Status Bar**: Check the current status and language
+
+## Basic Usage
+
+### Creating a New Project
+
+1. Click on `File` > `New Project`
+2. Select a directory for your project
+3. Enter your package details:
+   - Package name
+   - Version
+   - Author
+   - Description
+   - License
+4. Click `Create` to initialize the project structure
+
+### Building Packages
+
+1. Open your project
+2. Click on `Build` in the toolbar or select `Build` from the menu
+3. The built packages will be available in the `dist` directory
+
+### Installing in Development Mode
+
+1. Open your project
+2. Click on `Install` in the toolbar or select `Install` from the menu
+3. The package will be installed in development mode
+
+## Features
+
+### Package Management
+
+- Initialize new Python packages
+- Build source distributions and wheels
+- Install packages in development mode
+- Upload packages to PyPI
+- Manage package dependencies
+
+### Development Tools
+
+- Integrated terminal for command-line access
+- Tabbed help system with comprehensive documentation
+- Real-time logging and console output
+- Syntax highlighting for Python files
+- Code formatting with Black
+- Linting with flake8
+- Type checking with mypy
+
+### User Interface
+
+- Modern, customizable UI with light/dark themes
+- Multi-language support (English/Italian)
+- Keyboard shortcuts for common actions
+- Tabbed interface for better organization
+- Status bar with useful information
+
+## Advanced Usage
+
+### Customizing the Build Process
+
+You can customize the build process by editing the `pyproject.toml` or `setup.py` file in your project directory.
+
+### Using the Integrated Terminal
+
+The integrated terminal allows you to run shell commands without leaving the application. You can access it from the `Tools` > `Terminal` menu.
+
+### Keyboard Shortcuts
+
+- `Ctrl+N`: New Project
+- `Ctrl+O`: Open Project
+- `Ctrl+S`: Save
+- `Ctrl+Shift+S`: Save As
+- `F1`: Show Help
+- `F5`: Run Project
+- `Ctrl+Q`: Quit
+
+## Troubleshooting
+
+### Common Issues
+
+#### Package Installation Fails
+- Check your internet connection
+- Make sure you have the required build tools installed
+- Check the console for detailed error messages
+
+#### Build Fails
+- Check for syntax errors in your code
+- Verify `setup.py` or `pyproject.toml` is correctly configured
+- Check for missing dependencies
+
+#### UI Issues
+- Try resetting the UI settings from the `View` menu
+- Check the console for any error messages
+- If the issue persists, delete the configuration file and restart the application
+
+## FAQ
+
+### How do I change the language?
+Go to `View` > `Language` and select your preferred language.
+
+### How do I report a bug?
+Please open an issue on our [GitHub repository](https://github.com/Nsfr750/pack/issues) with a detailed description of the problem.
+
+### How can I contribute?
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for more information.
+
+## Need Help?
+
+If you need further assistance, please:
+
+1. Check the [documentation](https://python-package-manager.readthedocs.io/)
+2. Search the [GitHub issues](https://github.com/Nsfr750/pack/issues)
+3. Open a new issue if your problem isn't already reported
+
+## License
+
+This project is licensed under the GPL-3.0 License - see the [LICENSE](LICENSE) file for details.
 
 After installation, you can start the application by running:
 

@@ -1,47 +1,66 @@
 # Python Package Manager GUI
 
-![Python Package Manager](images/ita.png)
-![Python Package Manager](images/eng.png)
-
-A modern, user-friendly GUI application built with CustomTkinter for managing Python packages. Streamline your Python package development workflow with an intuitive interface.
-
-[![GitHub release](https://img.shields.io/badge/release-v1.1.0-green.svg?style=for-the-badge)](https://github.com/Nsfr750/pack/releases/tag/v1.1.0)
+[![GitHub release](https://img.shields.io/badge/release-v1.2.0-green.svg?style=for-the-badge)](https://github.com/Nsfr750/pack/releases/tag/v1.2.0)
 [![Python Version](https://img.shields.io/badge/python-3.8+-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg?style=for-the-badge)](https://www.gnu.org/licenses/gpl-3.0)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge)](https://github.com/Nsfr750/pack/graphs/commit-activity)
 [![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg?style=for-the-badge)](https://github.com/psf/black)
+[![Tests](https://img.shields.io/badge/tests-passing-green?style=for-the-badge)](https://github.com/Nsfr750/pack/actions)
+[![Coverage](https://img.shields.io/badge/coverage-95%25-brightgreen?style=for-the-badge)](https://codecov.io/gh/Nsfr750/pack)
+
+A modern, user-friendly GUI application built with CustomTkinter for managing Python packages. 
+Streamline your Python package development workflow with an intuitive interface.
+
+![Python Package Manager Screenshot](images/screenshot.png)
 
 ## ✨ Features
 
-### Package Management
+### 🚀 Package Management
 
-- 🏗️ Initialize new Python packages with customizable templates
-- 🔧 Build source distribution and wheel packages with a single click
-- ⚡ Install packages in development mode with automatic dependency handling
-- ☁️ Upload packages to PyPI with secure credential management
-- 🔍 Search and manage installed packages
+- 🏗️ **Initialize** new Python packages with customizable templates
+- 🔧 **Build** source distribution and wheel packages with a single click
+- ⚡ **Install** packages in development mode with automatic dependency handling
+- ☁️ **Upload** packages to PyPI with secure credential management
+- 🔍 **Search** and manage installed packages
+- 📦 **Dependency** resolution and management
 
-### Development Tools
+### 🛠️ Development Tools
 
-- 📝 Built-in Markdown viewer for documentation
-- 📊 Real-time logging and console output
-- 🧪 Automated testing integration
-- ✅ Code quality checks with flake8 and mypy
+- 📝 **Help System** with tabbed interface and search
+- 📊 **Real-time Logging** with console output
+- 🧪 **Testing** integration with pytest
+- ✅ **Code Quality** checks with flake8 and mypy
+- 🖥️ **Integrated Terminal** for command-line access
+- 🔄 **Auto-formatting** with Black and isort
 
-### User Experience
+### 🎨 User Experience
 
-- 🌍 Multi-language support (English/Italian)
-- 🎨 Modern, customizable UI with light/dark theme support
-- ⌨️ Keyboard shortcuts for power users
-- 🔄 Automatic update checking
+- 🌍 **Multi-language** support (English/Italian)
+- 🎨 **Themes** with light/dark mode support
+- ⌨️ **Keyboard Shortcuts** for power users
+- 🔄 **Auto-update** checking
+- 📚 **Comprehensive** in-app documentation
+- 🚦 **Status Bar** with useful information
 
-## 🚀 Requirements
+## 🚀 Getting Started
+
+### Prerequisites
 
 - Python 3.8 or higher
 - pip (latest version recommended)
 - Git (for version control integration)
+- Tcl/Tk (usually included with Python)
 
-## 📦 Installation
+### Installation
+
+#### From PyPI (Recommended)
+
+
+```bash
+pip install python-package-manager
+```
+
+#### From Source
 
 1. **Clone the repository**:
 
@@ -53,14 +72,19 @@ A modern, user-friendly GUI application built with CustomTkinter for managing Py
 2. **Create and activate a virtual environment** (recommended):
 
    ```bash
+   # Windows
    python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   .\venv\Scripts\activate
+   
+   # Unix/macOS
+   python3 -m venv venv
+   source venv/bin/activate
    ```
 
 3. **Install dependencies**:
 
    ```bash
-   pip install -r requirements.txt
+   pip install -e ".[dev]"
    ```
 
 ## 🏃‍♂️ Usage
@@ -68,25 +92,24 @@ A modern, user-friendly GUI application built with CustomTkinter for managing Py
 ### Running the Application
 
 ```bash
-python main.py
+python -m pack
 ```
 
 ### Basic Workflow
 
 1. **Project Setup**
-   - Select your project directory
-   - Use "Initialize Package" for new projects
-   - Configure package metadata through the intuitive UI
+   - Click `File > New Project` or `Open Project`
+   - Configure package metadata in the settings
+   - Initialize a new package or open an existing one
 
 2. **Development**
    - Edit your package code in your preferred editor
-   - Use the built-in tools to manage dependencies
-   - Check for updates to dependencies
+   - Use the built-in terminal for commands
+   - Check logs in the console tab
 
 3. **Building & Distribution**
-   - Build source and wheel distributions
-   - Validate package metadata
-   - Install in development mode with a single click
+   - Click `Build` to create distributions
+   - Install in development mode with `Install`
    - Upload to PyPI when ready
 
 ## 🛠️ Development
@@ -96,6 +119,63 @@ python main.py
 ```text
 pack/
 ├── struttura/         # Core application modules
+│   ├── __init__.py
+│   ├── main.py         # Main application entry point
+│   ├── ui/             # UI components
+│   ├── utils/          # Utility functions
+│   └── resources/      # Resources and assets
+├── tests/             # Test suite
+├── docs/              # Documentation
+├── examples/          # Example projects
+└── requirements.txt   # Dependencies
+```
+
+### Running Tests
+
+```bash
+# Run all tests
+pytest
+
+# Run with coverage report
+pytest --cov=pack tests/
+
+# Generate HTML coverage report
+coverage html
+```
+
+### Building the Application
+
+```bash
+# Build source distribution
+python -m build --sdist
+
+# Build wheel
+python -m build --wheel
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on how to get started.
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the GPL-3.0 License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) for the amazing UI framework
+- [PyPI](https://pypi.org/) for package hosting
+- All contributors who have helped improve this project
+
+---
+
+Made with ❤️ by the Python Package Manager Team
 ├── gui/               # GUI components
 ├── tests/             # Test suite
 ├── main.py            # Application entry point

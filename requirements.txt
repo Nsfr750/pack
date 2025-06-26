@@ -8,6 +8,7 @@ build>=1.2.0
 customtkinter>=5.2.1
 pillow>=10.3.0
 markdown2>=2.4.13
+pygments>=2.15.0  # For syntax highlighting in help
 
 # Development
 black>=24.3.0
@@ -26,3 +27,6 @@ sphinx-rtd-theme>=2.0.0
 # Linting
 isort>=5.13.2
 mypy>=1.8.0
+
+# Runtime dependencies
+requests>=2.31.0  # For update checking and web requests

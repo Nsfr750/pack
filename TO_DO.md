@@ -4,22 +4,24 @@
 
 - [ ] Implement package signing
 - [ ] Add support for private package repositories
+- [ ] Add more package management commands (uninstall, list, search)
+- [ ] Implement dependency resolution
 
 ## High Priority 🔥
 
 - [x] Implement comprehensive translation system
 - [x] Add sponsor/support window
-- [ ] Add more package management commands (uninstall, list, search)
-- [ ] Implement dependency resolution
+- [x] Add integrated terminal
+- [x] Improve help system with tabbed interface
 - [ ] Add support for virtual environments
 - [ ] Create more package templates
 
 ## Medium Priority ⏳
 
 - [ ] Implement package testing framework
-- [ ] Create installation wizard
-- [ ] Add dark/light theme support
 - [ ] Implement package health checks
+- [ ] Add keyboard shortcuts customization
+- [ ] Implement project templates
 
 ## Low Priority 📚
 
@@ -34,32 +36,30 @@
 - [x] Multi-language support (English/Italian)
 - [x] Complete Italian translation coverage
 - [x] Logging system with viewer
-- [x] Help system with markdown support
+- [x] Help system with tabbed interface
 - [x] Update checker
 - [x] Automated testing setup
 - [x] Code coverage reporting
 - [x] Type checking with mypy
 - [x] Pre-commit hooks for code quality
+- [x] Integrated terminal for command-line access
+- [x] Improved error handling and user feedback
+- [x] Keyboard shortcuts for common actions
 
-## In Progress
+## Future Ideas 💡
 
-- [x] Basic package management functionality
-- [x] Multi-language support
-- [x] Logging system
-
-## Completed
+- Implement package dependency graph visualization
+- Add integration with version control systems
+- Create plugin system for extending functionality
+- Implement package documentation generator
+- Automated testing framework
+- Package validation and linting
+- Performance optimization for large packages
 
 - [x] Project setup
 - [x] Basic GUI implementation
 - [x] Help system
 
-## Ideas for Future Versions
-
-- Package dependency graph visualization
-- Integration with version control systems
-- Automated testing framework
-- Package validation and linting
-- Performance optimization for large packages
 
 ## Notes
 

@@ -1,69 +1,92 @@
+<!-- markdownlint-disable MD051 -->
 # Contributing to Python Package Manager
+<!-- markdownlint-enable MD051 -->
 
-First off, thank you for considering contributing to Python Package Manager! It's people like you that make Python Package Manager such a great tool.
+First off, thank you for considering contributing to Python Package Manager! We appreciate your interest in making Python packaging easier for everyone.
 
-## Code of Conduct
+## 📜 Code of Conduct
 
-This project and everyone participating in it is governed by our [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code.
+This project and everyone participating in it is governed by our [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report any unacceptable behavior to the project maintainers.
 
-## How Can I Contribute?
+## 🤝 How Can I Contribute?
 
-### Reporting Bugs
+### 🐛 Reporting Bugs
 
-1. **Ensure the bug was not already reported** by searching on GitHub under [Issues](https://github.com/Nsfr750/pack/issues).
-2. If you're unable to find an open issue addressing the problem, [open a new one](https://github.com/Nsfr750/pack/issues/new). Be sure to include:
-   - A clear, descriptive title
-   - A detailed description of the issue
-   - Steps to reproduce the issue
+1. **Check existing issues** to ensure the bug hasn't been reported yet.
+2. **Create a new issue** with the following details:
+   - Clear, descriptive title
+   - Detailed description of the issue
+   - Steps to reproduce
    - Expected vs. actual behavior
-   - Screenshots if applicable
+   - Environment details (OS, Python version, etc.)
+   - Screenshots or screen recordings if applicable
+   - Any relevant error messages or logs
 
-### Submitting Changes
+### 💡 Suggesting Enhancements
+
+1. Check if a similar feature request exists
+2. Open a new issue with:
+   - Clear description of the enhancement
+   - Use case and benefits
+   - Any relevant examples or references
+   - Screenshots/mockups if applicable
+
+### 💻 Code Contributions
+
+#### Setting Up for Development
 
 1. **Fork** the repository on GitHub
-2. **Clone** your fork locally
+2. **Clone** your fork locally:
 
+   <!-- markdownlint-disable MD031 -->
    ```bash
    git clone https://github.com/your-username/pack.git
    cd pack
    ```
+   <!-- markdownlint-enable MD031 -->
 
-3. **Create a branch** for your changes
+3. **Set up development environment** (see [Development Setup](#-development-setup) section below)
+
+4. **Create a feature branch**:
 
    ```bash
    git checkout -b feature/your-feature-name
    ```
 
-4. Make your changes
-5. Run tests and ensure they pass
+5. **Make your changes** following the [coding standards](#-coding-standards)
+
+6. **Run tests** and ensure they pass:
 
    ```bash
    pytest
    ```
 
-6. **Commit** your changes
+7. **Commit your changes** with a descriptive message:
 
    ```bash
    git add .
-   git commit -m "Add your feature description"
+   git commit -m "feat: add new feature"
    ```
 
-7. **Push** to your fork and submit a pull request
+8. **Push** to your fork and open a pull request
 
-   ```bash
-   git push origin feature/your-feature-name
-   ```
+### 🔍 Code Review Process
 
-## Development Setup
+1. Ensure all CI checks pass
+2. A maintainer will review your PR
+3. Address any feedback or requested changes
+4. Once approved, your changes will be merged
+
+## 🛠 Development Setup
 
 ### Prerequisites
 
-- Python 3.8 or higher
-- pip (latest version recommended)
+- Python 3.8+
 - Git
-- (Optional) Virtual environment (venv, conda, etc.)
+- pip (latest version)
+- Virtual environment (recommended)
 
-### Local Setup
+### Local Development
 
 1. **Clone the repository**:
 
@@ -72,41 +95,65 @@ This project and everyone participating in it is governed by our [Code of Conduc
    cd pack
    ```
 
-2. **Create and activate a virtual environment**:
+2. **Set up virtual environment**:
 
    ```bash
-   # On Windows
+   # Windows
    python -m venv venv
    .\venv\Scripts\activate
    
-   # On Unix or MacOS
+   # Unix/macOS
    python3 -m venv venv
    source venv/bin/activate
    ```
 
-3. **Install development dependencies**:
+3. **Install dependencies**:
 
    ```bash
-   pip install -r requirements-dev.txt
-   pip install -e .
+   pip install -e ".[dev]"
    ```
 
-4. **Install pre-commit hooks**:
+4. **Set up pre-commit hooks**:
 
    ```bash
    pre-commit install
    ```
 
-### Using GitHub Codespaces (Recommended)
+### 🧪 Testing
 
-1. Click the "Code" button on the repository page
-2. Select "Open with Codespaces"
-3. Create a new codespace
-4. The environment will be set up automatically
+Run the test suite with:
 
-## Code Style
+```bash
+# Run all tests
+pytest
 
-We enforce consistent code style using the following tools:
+# Run with coverage
+pytest --cov=pack tests/
+
+# Run a specific test file
+pytest tests/test_module.py
+
+# Run a specific test
+pytest tests/test_module.py::test_function
+
+# Generate HTML coverage report
+coverage html
+```
+
+### 📚 Documentation
+
+Documentation is built with Sphinx. To build locally:
+
+```bash
+cd docs
+make html
+```
+
+The documentation will be available in `docs/_build/html/index.html`.
+
+## 🧹 Code Quality
+
+We use several tools to maintain code quality:
 
 | Tool | Purpose | Command |
 |------|---------|---------|
@@ -121,51 +168,24 @@ Run all code style checks:
 pre-commit run --all-files
 ```
 
-## Testing
+## 📝 Coding Standards
 
-### Running Tests
+- Follow [PEP 8](https://www.python.org/dev/peps/pep-0008/) style guide
+- Use type hints for all new code
+- Write docstrings following [Google style](https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings)
+- Keep functions small and focused
+- Write tests for new functionality
+- Update documentation when adding new features
 
-We use `pytest` for testing. To run the test suite:
+### Git Commit Messages
 
-```bash
-# Run all tests
-pytest
+- Use the [Conventional Commits](https://www.conventionalcommits.org/) format
+- Start with a type: `feat:`, `fix:`, `docs:`, `style:`, `refactor:`, `test:`, `chore:`
+- Keep the first line under 50 characters
+- Include a detailed description when necessary
+- Reference issues and pull requests when applicable
 
-# Run a specific test file
-pytest tests/test_module.py
-
-# Run a specific test
-pytest tests/test_module.py::test_function
-```
-
-### Test Coverage
-
-To generate a coverage report:
-
-```bash
-pytest --cov=pack --cov-report=term-missing
-```
-
-### Linting
-
-Run the linter:
-
-```bash
-flake8
-```
-
-## Documentation
-
-We use Sphinx for documentation. To build the documentation locally:
-
-```bash
-cd docs
-make html
-```
-
-The documentation will be available in `docs/_build/html/index.html`.
-
-## Pull Request Process
+## 🔄 Pull Request Process
 
 1. **Branch Naming**:
    - `feature/` - New features
@@ -174,13 +194,7 @@ The documentation will be available in `docs/_build/html/index.html`.
    - `refactor/` - Code refactoring
    - `test/` - Test-related changes
 
-2. **Commit Messages**:
-   - Use the present tense ("Add feature" not "Added feature")
-   - Use the imperative mood ("Move button to..." not "Moves button to...")
-   - Keep the first line under 50 characters
-   - Reference issues and pull requests liberally
-
-3. **Pull Request Checklist**:
+2. **Pull Request Checklist**:
    - [ ] Tests pass
    - [ ] Documentation updated (if needed)
    - [ ] Code follows style guidelines
@@ -188,53 +202,29 @@ The documentation will be available in `docs/_build/html/index.html`.
    - [ ] Changes are backward compatible
    - [ ] All new and existing tests pass
 
-4. **Review Process**:
+3. **Review Process**:
    - At least one approval required before merging
    - All CI checks must pass
    - Maintainers will review your PR and may request changes
 
-## Reporting Issues
-
-Before reporting an issue, please check if it has already been reported in the [GitHub Issues](https://github.com/Nsfr750/pack/issues).
-
-When creating an issue report, please include:
-
-1. **Description**: Clear and concise description of the bug
-2. **Steps to Reproduce**:
-
-   ```text
-   1. Go to '...'
-   2. Click on '....'
-   3. Scroll down to '....'
-   4. See error
-   ```
-
-3. **Expected Behavior**: What you expected to happen
-4. **Actual Behavior**: What actually happened
-5. **Screenshots**: If applicable, add screenshots to help explain
-6. **Environment**:
-   - OS: [e.g., Windows 10, macOS Big Sur, Ubuntu 20.04]
-   - Python Version: [e.g., 3.8.5]
-   - Package Version: [e.g., 1.0.0]
-
-## Feature Requests
-
-We welcome feature requests! Before submitting a new feature request, please:
-
-1. Check if a similar feature already exists or has been requested
-2. Clearly describe the problem you're trying to solve
-3. Explain why this feature would be valuable to other users
-4. Provide any relevant use cases or examples
-
-## Community
+## 🌐 Community
 
 - **Discord**: [Join our community](https://discord.gg/your-invite-link)
 - **Twitter**: [@Nsfr750](https://twitter.com/Nsfr750)
 - **Email**: [nsfr750@yandex.com](mailto:nsfr750@yandex.com)
 
-## License
+## 🏷 Versioning
 
-By contributing, you agree that your contributions will be licensed under the [GPLv3 License](LICENSE).
+We follow [Semantic Versioning](https://semver.org/). For the versions available, see the [tags on this repository](https://github.com/Nsfr750/pack/tags).
+
+## 📄 License
+
+This project is licensed under the GPL-3.0 License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Thanks to all contributors who have helped improve this project!
+- Special thanks to our sponsors and supporters.
 
 ## Project Structure
 
@@ -246,14 +236,6 @@ pack/
 ├── docs/              # Documentation
 └── scripts/           # Utility scripts
 ```
-
-## Versioning
-
-We use [Semantic Versioning](https://semver.org/). For the versions available, see the [tags on this repository](https://github.com/Nsfr750/pack/tags).
-
-## License
-
-This project is licensed under the GPLv3 License - see the [LICENSE](LICENSE) file for details.
 
 ## Questions?
 

@@ -85,13 +85,18 @@ TRANSLATIONS = {
         "package_manager": "Package Manager",
         "check_for_updates": "Check for Updates",
         "view_log": "View Log",
-        "terminal": "Terminal",
+        "terminal": "Open Terminal",
         "failed_to_open_terminal": "Failed to open terminal",
         
         # Help menu
         "documentation": "Documentation",
         "report_issue": "Report Issue",
         "about": "About",
+        "help": "Help",
+        "usage_tab": "Usage",
+        "features_tab": "Features",
+        "help_usage": "Python Package Manager - Usage Guide\n\n1. Creating a New Project:\n   - Click on 'File' > 'New Project'\n   - Select a directory for your project\n   - Enter your package details\n   - Click 'Create' to initialize the package structure\n\n2. Building Packages:\n   - Open your project\n   - Click on 'Build' to create distribution packages\n   - Find your packages in the 'dist' directory\n\n3. Installing Packages:\n   - Open your project\n   - Click on 'Install' to install in development mode",
+        "help_features": "Python Package Manager - Features\n\n• Project Management:\n  - Create new Python packages\n  - Manage project metadata\n  - Handle package dependencies\n\n• Building and Distribution:\n  - Build source distributions\n  - Create wheel packages\n  - Generate setup.py and pyproject.toml\n\n• Development Tools:\n  - Integrated terminal\n  - Log viewer\n  - Package manager integration",
         
         # Common buttons
         "ok": "OK",
@@ -318,12 +323,17 @@ TRANSLATIONS = {
         "package_manager": "Gestione Pacchetti",
         "check_for_updates": "Controlla Aggiornamenti",
         "view_log": "Visualizza Log",
-        "terminal": "Terminale",
+        "terminal": "ApriTerminale",
         
         # Help menu
         "documentation": "Documentazione",
         "report_issue": "Segnala Problema",
         "about": "Informazioni",
+        "help": "Aiuto",
+        "usage_tab": "Utilizzo",
+        "features_tab": "Funzionalità",
+        "help_usage": "Python Package Manager - Guida all'Uso\n\n1. Creazione di un Nuovo Progetto:\n   - Clicca su 'File' > 'Nuovo Progetto'\n   - Seleziona una directory per il tuo progetto\n   - Inserisci i dettagli del pacchetto\n   - Clicca 'Crea' per inizializzare la struttura del pacchetto\n\n2. Creazione dei Pacchetti:\n   - Apri il tuo progetto\n   - Clicca su 'Costruisci' per creare i pacchetti di distribuzione\n   - Trova i tuoi pacchetti nella directory 'dist'\n\n3. Installazione dei Pacchetti:\n   - Apri il tuo progetto\n   - Clicca su 'Installa' per l'installazione in modalità sviluppo",
+        "help_features": "Python Package Manager - Funzionalità\n\n• Gestione Progetti:\n  - Crea nuovi pacchetti Python\n  - Gestisci i metadati del progetto\n  - Gestisci le dipendenze\n\n• Creazione e Distribuzione:\n  - Crea distribuzioni sorgente\n  - Crea pacchetti wheel\n  - Genera setup.py e pyproject.toml\n\n• Strumenti di Sviluppo:\n  - Terminale integrato\n  - Visualizzatore log\n  - Integrazione con il gestore pacchetti",
         
         # Common buttons
         "ok": "OK",

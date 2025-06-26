@@ -10,7 +10,7 @@ import os
 # Handle both direct execution and package import
 try:
     from .about import About
-    from .help import show_help
+    from .help import Help
     from .sponsor import Sponsor
     from .log_viewer import LogViewer
     from .version import show_version
@@ -98,8 +98,8 @@ def create_menu_bar(root, app):
 
     # Help menu
     help_menu = tk.Menu(menubar, tearoff=0)
-    help_menu.add_command(label=tr('documentation'), command=show_help)
-    help_menu.add_command(label=tr('report_issue'))
+    help_menu.add_command(label=tr('documentation'), command=lambda: Help.show_help(root))
+    help_menu.add_command(label=tr('report_issue'), command=lambda: webbrowser.open('https://github.com/Nsfr750/pack/issues'))
     help_menu.add_separator()
     help_menu.add_command(label=tr('about'), command=lambda: About.show_about(root))
     help_menu.add_command(label=tr('sponsor'), command=lambda: Sponsor(root).show_sponsor())
