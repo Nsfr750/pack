@@ -4,7 +4,7 @@ Help text for Python Package Manager
 This module contains the help documentation that was originally in HELP.md.
 """
 
-HELP_TEXT = """# Python Package Manager - Help Guide
+HELP_TEXT = r"""# Python Package Manager - Help Guide
 
 [![Documentation Status](https://readthedocs.org/projects/python-package-manager/badge/?version=latest)](https://python-package-manager.readthedocs.io/)
 [![GitHub Issues](https://img.shields.io/github/issues/Nsfr750/pack)](https://github.com/Nsfr750/pack/issues)
