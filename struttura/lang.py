@@ -122,6 +122,7 @@ TRANSLATIONS = {
         "view_log": "Show Log",
         "terminal": "Opena a Terminal",
         "check_for_update": "Check for Update",
+        "no_log_entries": "No log entries",
 
         # Sponsor Dialog
         "sponsor_on_github": "Sponsor on GitHub",
@@ -270,6 +271,7 @@ TRANSLATIONS = {
         "package_manager": "Gestore Pacchetti",
         "view_log": "Visualizza Log",
         "terminal": "Apri un Terminale",
+        "no_log_entries": "Nessun Log",
 
         # Sponsor Dialog
         "sponsor_on_github": "Sponsorizza su GitHub",
@@ -411,7 +413,7 @@ TRANSLATIONS = {
         "generate_setup_files": "Genera file setup.py",
         "sign_packages": "Firma i pacchetti con GPG",
         "dependency_management": "Gestione Dipendenze",
-        "check_for_updates": "Controlla aggiornamenti pacchetti",
+        "check_for_updates": "Controlla aggiornamenti Programma",
         "resolve_conflicts": "Risolvi i conflitti tra dipendenze",
         "manage_requirements": "Gestisci i file dei requisiti",
         "repository_support": "Supporto Repository",
@@ -495,6 +497,7 @@ TRANSLATIONS = {
         "view_log": "Ver registro",
         "terminal": "Abrir terminal",
         "check_for_update": "Buscar actualizaciones",
+        "no_log_entries": "No hay entradas en el registro",
 
         # Sponsor Dialog
         "sponsor_on_github": "Patrocinar en GitHub",
@@ -643,6 +646,7 @@ TRANSLATIONS = {
         "view_log": "Visualizar log",
         "terminal": "Abrir terminal",
         "check_for_update": "Verificar atualizações",
+        "no_log_entries": "Nenhuma entrada no log",
 
         # Diálogo de Apoio
         "sponsor_on_github": "Apoiar no GitHub",
@@ -791,6 +795,7 @@ TRANSLATIONS = {
         "view_log": "Protokoll anzeigen",
         "terminal": "Terminal öffnen",
         "check_for_update": "Auf Aktualisierungen prüfen",
+        "no_log_entries": "Keine Protokolleinträge",
 
         # Spenden-Dialog
         "sponsor_on_github": "Auf GitHub unterstützen",
@@ -939,6 +944,7 @@ TRANSLATIONS = {
         "view_log": "Voir le journal",
         "terminal": "Ouvrir le terminal",
         "check_for_update": "Vérifier les mises à jour",
+        "no_log_entries": "Aucune entrée dans le journal",
 
         # Dialogue de soutien
         "sponsor_on_github": "Soutenir sur GitHub",
@@ -1087,6 +1093,7 @@ TRANSLATIONS = {
         "view_log": "Просмотр лога",
         "terminal": "Открыть терминал",
         "check_for_update": "Проверить обновления",
+        "no_log_entries": "Нет записей в логе",
 
         # Диалог поддержки
         "sponsor_on_github": "Поддержать на GitHub",
