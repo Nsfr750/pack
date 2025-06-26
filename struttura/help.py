@@ -2,11 +2,12 @@ import os
 import re
 import webbrowser
 import tkinter as tk
-from tkinter import ttk, font as tkfont
+from tkinter import ttk, font as tkfont, messagebox
 from tkinter.scrolledtext import ScrolledText
 import markdown2
 from io import StringIO
 from html.parser import HTMLParser
+from .helptext import HELP_TEXT
 
 class HTMLStripper(HTMLParser):
     def __init__(self):
@@ -147,16 +148,10 @@ def show_help():
         return html.strip()
     
     try:
-        # Get the root directory of the application
-        app_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        readme_path = os.path.join(app_root, 'HELP.md')
-        
-        with open(readme_path, 'r', encoding='utf-8') as f:
-            markdown_content = f.read()
-        
+        # Use the imported HELP_TEXT
         # Convert markdown to HTML with minimal extras
         html = markdown2.markdown(
-            markdown_content,
+            HELP_TEXT,
             extras=[
                 'fenced-code-blocks',
                 'break-on-newline',
