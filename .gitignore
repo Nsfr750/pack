@@ -23,6 +23,7 @@ var/
 .installed.cfg
 *.egg
 MANIFEST
+*.bat
 
 # Installer logs
 pip-log.txt
@@ -80,3 +81,6 @@ Traceback.log
 # Other
 *.bak
 *.tmp
+/main.dist/certifi
+/main.dist
+PyrhonPack.exe
