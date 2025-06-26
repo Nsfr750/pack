@@ -86,6 +86,7 @@ TRANSLATIONS = {
         "check_for_updates": "Check for Updates",
         "view_log": "View Log",
         "terminal": "Terminal",
+        "failed_to_open_terminal": "Failed to open terminal",
         
         # Help menu
         "documentation": "Documentation",
@@ -311,6 +312,7 @@ TRANSLATIONS = {
         "zoom_in": "Ingrandisci",
         "zoom_out": "Riduci",
         "reset_zoom": "Ripristina zoom",
+        "failed_to_open_terminal": "Impossibile aprire il terminale",
         
         # Tools menu
         "package_manager": "Gestione Pacchetti",
