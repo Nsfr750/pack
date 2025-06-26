@@ -11,8 +11,7 @@
 A modern, user-friendly GUI application built with CustomTkinter for managing Python packages.
 Streamline your Python package development workflow with an intuitive interface.
 
-![Python Package Manager Screenshot](images/eng.png)
-![Python Package Manager Screenshot](images/ita.png)
+![Python Package Manager Screenshot](images/screenshot.png)
 
 ## ✨ Features
 
