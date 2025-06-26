@@ -1,4 +1,8 @@
 import tkinter as tk
+import platform
+import subprocess
+import os
+import webbrowser
 from tkinter import messagebox
 import sys
 import os
@@ -55,10 +59,25 @@ def create_menu_bar(root, app):
 
     # Tools menu
     tools_menu = tk.Menu(menubar, tearoff=0)
-    tools_menu.add_command(label=tr('package_manager'))
+    tools_menu.add_command(
+        label=tr('package_manager'),
+        command=lambda: webbrowser.open('https://packaging.python.org/en/latest/tutorials/packaging-projects/')
+    )
     tools_menu.add_separator()
     tools_menu.add_command(label=tr('view_log'), command=lambda: LogViewer.show_log(root))
-    tools_menu.add_command(label=tr('terminal'))
+    def open_terminal():
+        """Open a terminal window appropriate for the current OS."""
+        try:
+            if platform.system() == 'Windows':
+                # On Windows, open cmd.exe in the current working directory
+                subprocess.Popen('cmd.exe', cwd=os.getcwd())
+            else:
+                # On Unix-like systems, try to open xterm
+                subprocess.Popen(['xterm'])
+        except Exception as e:
+            messagebox.showerror(tr('error'), f"{tr('failed_to_open_terminal')}: {str(e)}")
+    
+    tools_menu.add_command(label=tr('terminal'), command=open_terminal)
     tools_menu.add_separator()
     tools_menu.add_command(label=tr('check_for_updates'), command=lambda: check_for_updates(root))
     menubar.add_cascade(label=tr('menu_tools'), menu=tools_menu)
