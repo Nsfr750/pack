@@ -5,6 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2025-06-26
+
+### Added
+- Complete Italian translation for all UI elements
+- Package signing with GPG support
+- Repository management interface
+- Dependency management with conflict resolution
+- New requirements management dialog
+- Comprehensive error handling and user feedback
+
+### Changed
+- Updated UI for better internationalization support
+- Improved error messages and dialogs
+- Enhanced package building and installation process
+
+### Fixed
+- Fixed issues with non-ASCII characters in paths
+- Resolved dependency resolution problems
+- Fixed UI layout issues in various dialogs
+
 ## [Unreleased]
 
 ### Added

@@ -2,19 +2,19 @@
 
 ## In Progress 🚧
 
-- [ ] Implement package signing
-- [ ] Add support for private package repositories
-- [ ] Add more package management commands (uninstall, list, search)
-- [ ] Implement dependency resolution
+- [ ] Add support for virtual environments
+- [ ] Create more package templates
+- [ ] Implement package testing framework
+- [ ] Add support for package documentation generation
 
 ## High Priority 🔥
 
-- [x] Implement comprehensive translation system
-- [x] Add sponsor/support window
-- [x] Add integrated terminal
-- [x] Improve help system with tabbed interface
-- [ ] Add support for virtual environments
-- [ ] Create more package templates
+- [x] Implement package signing with GPG support
+- [x] Add repository management interface
+- [x] Implement dependency resolution and conflict detection
+- [x] Add comprehensive Italian translation
+- [x] Improve error handling and user feedback
+- [ ] Add support for private package repositories
 
 ## Medium Priority ⏳
 
