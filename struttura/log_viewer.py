@@ -35,7 +35,7 @@ class LogViewer:
             if filtered:
                 text_area.insert(tk.END, ''.join(filtered))
             else:
-                text_area.insert(tk.END, tr('no_log_entries', level=selected_level.get()))
+                text_area.insert(tk.END, tr('no_log_entries').format(level=selected_level.get()))
             text_area.config(state=tk.DISABLED)
 
         def on_filter_change():
