@@ -175,8 +175,7 @@ This project is licensed under the GPL-3.0 License - see the [LICENSE](LICENSE) 
 
 ---
 
-Made with ❤️ by the Python Package Manager Team
-
+Made with ❤️ by Nsfr750
 ## Code Style
 
 This project uses:
