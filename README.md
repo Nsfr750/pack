@@ -1,6 +1,6 @@
 # Python Package Manager GUI
 
-[![GitHub release](https://img.shields.io/badge/release-v1.3.0-green.svg?style=for-the-badge)](https://github.com/Nsfr750/pack/releases/tag/v1.3.0)
+[![GitHub release](https://img.shields.io/badge/release-v1.4.0-green.svg?style=for-the-badge)](https://github.com/Nsfr750/pack/releases/tag/v1.4.0)
 [![Python Version](https://img.shields.io/badge/python-3.8+-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg?style=for-the-badge)](https://www.gnu.org/licenses/gpl-3.0)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge)](https://github.com/Nsfr750/pack/graphs/commit-activity)
@@ -37,7 +37,7 @@ Streamline your Python package development workflow with an intuitive interface.
 
 ### 🎨 User Experience
 
-- 🌍 **Multi-language** support (English/Italian) with complete translation coverage
+- 🌍 **Multi-language** support (English, Italian, Spanish, Portuguese, German, French, Russian) with complete translation coverage
 - 🎨 **Themes** with light/dark mode support
 - ⌨️ **Keyboard Shortcuts** for power users
 - 🔄 **Auto-update** checking
@@ -176,6 +176,7 @@ This project is licensed under the GPL-3.0 License - see the [LICENSE](LICENSE) 
 ---
 
 Made with ❤️ by Nsfr750
+
 ## Code Style
 
 This project uses:

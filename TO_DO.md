@@ -38,8 +38,8 @@
 - [x] Initial project setup and structure
 - [x] Basic GUI interface with CustomTkinter
 - [x] Package management functionality (init, build, install, upload)
-- [x] Multi-language support (English/Italian)
-- [x] Complete Italian translation coverage
+- [x] Multi-language support (English, Italian, Spanish, Portuguese, German, French, Russian)
+- [x] Complete translation coverage for all supported languages
 - [x] Logging system with viewer
 - [x] Help system with tabbed interface
 - [x] Update checker
@@ -48,6 +48,7 @@
 - [x] Type checking with mypy
 - [x] Pre-commit hooks for code quality
 - [x] Integrated terminal for command-line access
+- [x] Added quit confirmation dialog in all supported languages
 - [x] Improved error handling and user feedback
 - [x] Keyboard shortcuts for common actions
 - [x] Comprehensive help documentation
@@ -66,9 +67,7 @@
 - Performance optimization for large packages
 
 ## Notes
-
 - Use GitHub issues for tracking specific bugs and feature requests
 - Follow semantic versioning for releases
 - Keep dependencies updated regularly
 - Write tests for new features
-  

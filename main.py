@@ -264,11 +264,53 @@ class PyPackagerApp:
         self.status_bar.pack(side=tk.BOTTOM, fill=tk.X)
         self.status_var.set(tr('ready'))
     
+    def log(self, message):
+        """Log a message to the output console."""
+        if hasattr(self, 'output_console'):
+            self.output_console.configure(state='normal')
+            self.output_console.insert(tk.END, message + '\n')
+            self.output_console.see(tk.END)
+            self.output_console.configure(state='disabled')
+        else:
+            print(message)  # Fallback to console if output_console is not available
+            
+    def run_command(self, command, cwd=None):
+        """Run a command and return True if successful."""
+        try:
+            self.log(f"$ {' '.join(command)}")
+            result = subprocess.run(
+                command,
+                cwd=cwd or self.project_path,
+                capture_output=True,
+                text=True,
+                encoding='utf-8',
+                errors='replace'
+            )
+            
+            if result.stdout:
+                self.log(result.stdout)
+            if result.stderr:
+                self.log(f"Error: {result.stderr}")
+                
+            return result.returncode == 0
+            
+        except Exception as e:
+            self.log(f"Error executing command: {str(e)}")
+            return False
+    
     def _create_content_area(self):
         """Create the main content area."""
+        # Create a paned window to split between welcome/recent and console
+        content_pane = tk.PanedWindow(self.content, orient=tk.VERTICAL, sashwidth=3, sashrelief=tk.RAISED)
+        content_pane.pack(fill=tk.BOTH, expand=True)
+        
+        # Top frame for welcome message and recent projects
+        top_frame = ttk.Frame(content_pane)
+        content_pane.add(top_frame, minsize=200, height=300)
+        
         # Welcome message
         welcome_label = ttk.Label(
-            self.content,
+            top_frame,
             text=tr('welcome_message'),
             font=('Helvetica', 12),
             wraplength=600
@@ -276,15 +318,39 @@ class PyPackagerApp:
         welcome_label.pack(pady=20, padx=20, fill=tk.X)
         
         # Recent projects frame
-        recent_frame = ttk.LabelFrame(self.content, text=tr('recent_projects'))
+        recent_frame = ttk.LabelFrame(top_frame, text=tr('recent_projects'))
         recent_frame.pack(padx=20, pady=10, fill=tk.BOTH, expand=True)
         
         # Placeholder for recent projects list
         self.recent_listbox = tk.Listbox(recent_frame)
         self.recent_listbox.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
         
+        # Console frame at the bottom
+        console_frame = ttk.LabelFrame(content_pane, text=tr('console'))
+        content_pane.add(console_frame, minsize=100, height=200)
+        
+        # Console text widget with scrollbar
+        console_scrollbar = ttk.Scrollbar(console_frame)
+        console_scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+        
+        self.output_console = tk.Text(
+            console_frame,
+            wrap=tk.WORD,
+            yscrollcommand=console_scrollbar.set,
+            state='disabled',
+            bg='black',
+            fg='white',
+            insertbackground='white',
+            font=('Consolas', 10)
+        )
+        self.output_console.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
+        console_scrollbar.config(command=self.output_console.yview)
+        
         # Load recent projects
         self.load_recent_projects()
+        
+        # Initial log message
+        self.log("Application started. Ready to work with Python packages.")
     
     def load_recent_projects(self):
         """Load recent projects from settings."""
@@ -832,15 +898,18 @@ setup(
         return False
     
     def install_package(self):
+        """Install the package in development mode."""
         if not self.project_path:
             messagebox.showerror("Error", "Please select a project directory")
             return False
             
         self.log("Installing package in development mode...")
         if self.run_command([sys.executable, '-m', 'pip', 'install', '-e', '.'], cwd=self.project_path):
-            self.log("Package installed in development mode!")
+            self.log("✓ Package installed in development mode!")
             return True
-        return False
+        else:
+            self.log("✗ Failed to install package in development mode")
+            return False
     
     def upload_to_pypi(self):
         path = self.project_path.get()

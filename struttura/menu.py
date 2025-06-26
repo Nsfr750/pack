@@ -7,24 +7,14 @@ from tkinter import messagebox
 import sys
 import os
 
-# Handle both direct execution and package import
-try:
-    from .about import About
-    from .help import Help
-    from .sponsor import Sponsor
-    from .log_viewer import LogViewer
-    from .version import show_version
-    from .lang import translator, tr, SUPPORTED_LANGUAGES
-    from .updates import check_for_updates
-except ImportError:
-    # For direct execution
-    from about import About
-    from help import show_help
-    from sponsor import Sponsor
-    from log_viewer import LogViewer
-    from version import show_version
-    from lang import translator, tr, SUPPORTED_LANGUAGES
-    from updates import check_for_updates
+# Use absolute imports
+from struttura.about import About
+from struttura.help import Help
+from struttura.sponsor import Sponsor
+from struttura.log_viewer import LogViewer
+from struttura.version import show_version
+from struttura.lang import translator, tr, SUPPORTED_LANGUAGES
+from struttura.updates import check_for_updates
 
 def create_menu_bar(root, app):
     menubar = tk.Menu(root)
